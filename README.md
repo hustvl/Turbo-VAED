@@ -11,7 +11,7 @@ Huazhong University of Science and Technology (HUST)
 </div>
 
 <div align="center">
-<img src="./images/main.pdf">
+<img src="./images/main.png">
 </div>
 
 ## 📄 Introduction
@@ -29,9 +29,9 @@ To our knowledge, our method enables real-time 720p video VAE decoding on mobile
 ## 📝 Results
 
 <div align="center">
-<img src="images/table1.pdf" alt="Results1">
+<img src="images/table1.png" alt="Results1">
 </div>
 
 <div align="center">
-<img src="images/table2.pdf" alt="Results2">
+<img src="images/table2.png" alt="Results2">
 </div>
