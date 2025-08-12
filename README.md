@@ -1,6 +1,6 @@
 <div align="center">
 <h1> Turbo-VAED </h1>
-<h2>Fast and Stable Transfer of Video-VAEs to Mobile Devices</h2>
+<h3>Fast and Stable Transfer of Video-VAEs to Mobile Devices</h3>
 
 **_Mobile Video VAEs Trained with Only One RTX 4090 GPU_**
 
