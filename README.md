@@ -2,6 +2,8 @@
 <h1> Turbo-VAED </h1>
 <h2>Fast and Stable Transfer of Video-VAEs to Mobile Devices</h2>
 
+**_Mobile Video VAEs Trained with Only One RTX 4090 GPU_**
+
 Ya Zou<sup>\*</sup>, [Jingfeng Yao](https://github.com/JingfengYao)<sup>\*</sup>, Siyuan Yu, [Shuai Zhang](https://github.com/Shuaizhang7), [Wenyu Liu](http://eic.hust.edu.cn/professor/liuwenyu), [Xinggang Wang](https://xwcv.github.io/index.htm)<sup>📧</sup>
 
 Huazhong University of Science and Technology (HUST) 
