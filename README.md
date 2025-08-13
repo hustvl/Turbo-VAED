@@ -10,11 +10,17 @@ Huazhong University of Science and Technology (HUST)
 
 (\* equal contribution, 📧 corresponding author: xgwang@hust.edu.cn)
 
+[![arxiv paper](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/2508.09136)
+
 </div>
 
 <div align="center">
 <img src="./images/main.png">
 </div>
+
+## 📰 News
+
+- **[2025.08.13]** We released our paper on [arXiv](https://arxiv.org/abs/2508.09136). The code and weights will be available soon!
 
 ## 📄 Introduction
 
@@ -37,3 +43,20 @@ To our knowledge, our method enables real-time 720p video VAE decoding on mobile
 <div align="center">
 <img src="images/table2.png" alt="Results2">
 </div>
+
+## 📝 Citation
+
+If you find Turbo-VAED useful, please consider giving us a star 🌟 and citing it as follows:
+
+```
+@misc{zou2025turbovaedfaststabletransfer,
+      title={Turbo-VAED: Fast and Stable Transfer of Video-VAEs to Mobile Devices}, 
+      author={Ya Zou and Jingfeng Yao and Siyuan Yu and Shuai Zhang and Wenyu Liu and Xinggang Wang},
+      year={2025},
+      eprint={2508.09136},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.09136}, 
+}
+
+```
