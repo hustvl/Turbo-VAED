@@ -8,6 +8,8 @@ Ya Zou<sup>\*</sup>, [Jingfeng Yao](https://github.com/JingfengYao)<sup>\*</sup>
 
 Huazhong University of Science and Technology (HUST) 
 
+{zouya_,jfyao,siyuanyu,shuaizhang}@hust.edu.cn
+
 (\* equal contribution, 📧 corresponding author: xgwang@hust.edu.cn)
 
 [![arxiv paper](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/2508.09136)
