@@ -64,10 +64,11 @@ You can download video datasets such as [VidGen](https://huggingface.co/datasets
 
 You can download [LTX-VAE](https://huggingface.co/Lightricks/LTX-Video/tree/main/vae), [Hunyuan-VAE](https://huggingface.co/hunyuanvideo-community/HunyuanVideo/tree/main/vae), [CogVideoX-VAE](https://huggingface.co/zai-org/CogVideoX1.5-5B/tree/main/vae), or any other video VAE you want to distill.
 
-* (Optional) You can pre-generate and save latents for small video datasets to reduce the computational cost of encoding during training. And you can use the dataset implementation in `video_latent_dataset.py`.
+* (Optional) You can pre-generate and save latents for small video datasets to reduce the computational cost of encoding during training.
 ```
 python train_vae/generate_latents.py
 ```
+And you can use the dataset implementation in `train_vae/dataset/video_latent_dataset.py` for training.
 
 *  You need to modify some necessary paths as required in `train.sh`.
 
