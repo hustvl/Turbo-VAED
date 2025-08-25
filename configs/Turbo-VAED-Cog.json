@@ -1,0 +1,50 @@
+{
+  "_class_name": "AutoencoderKLTurboVAED",
+  "_diffusers_version": "0.32.0.dev0",
+  "decoder_block_out_channels": [
+    16,
+    32,
+    256,
+    512
+  ],
+  "decoder_causal": false,
+  "in_channels": 3,
+  "latent_channels": 16,
+  "decoder_layers_per_block": [
+    5,
+    4,
+    4,
+    4,
+    5
+  ],
+  "out_channels": 3,
+  "patch_size": 1,
+  "patch_size_t": 1,
+  "resnet_norm_eps": 1e-06,
+  "scaling_factor": 1.0,
+  "spatio_temporal_scaling": [
+    true,
+    true,
+    true,
+    false
+  ],
+  "decoder_spatio_only": [
+    true,
+    false,
+    false,
+    false
+  ],
+  "decoder_is_dw_conv": [
+    false,
+    false,
+    false,
+    true,
+    true
+  ],
+  "decoder_dw_kernel_size": 5,
+  "aligned_feature_projection_mode": "conv-2layer",
+  "aligned_feature_projection_dim": [
+    [512,4096]
+  ],
+  "aligned_blks_indices": [1] 
+}

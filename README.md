@@ -8,8 +8,6 @@ Ya Zou<sup>\*</sup>, [Jingfeng Yao](https://github.com/JingfengYao)<sup>\*</sup>
 
 Huazhong University of Science and Technology (HUST) 
 
-{zouya_, jfyao, siyuanyu, shuaizhang}@hust.edu.cn
-
 (\* equal contribution, 📧 corresponding author: xgwang@hust.edu.cn)
 
 [![arxiv paper](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/2508.09136)
@@ -45,6 +43,53 @@ To our knowledge, our method enables real-time 720p video VAE decoding on mobile
 <div align="center">
 <img src="images/table2.png" alt="Results2">
 </div>
+
+## 🎯 How to Use
+
+### Installation
+
+```
+conda create -n turbovaed python=3.10.0
+conda activate turbovaed
+pip install -r requirements.txt
+```
+
+## 🎮 Train Your Own Models
+
+* Downloads Video Datasets & Teacher Models
+You can download video datasets such as [VidGen](https://huggingface.co/datasets/Fudan-FUXI/VIDGEN-1M) and [UCF-101](https://www.crcv.ucf.edu/data/UCF101.php). The video data should be placed in a root directory TRAIN_ROOT_DIR, which may consist of multiple subdirectories.
+
+You can download [LTX-VAE](https://huggingface.co/Lightricks/LTX-Video/tree/main/vae), [Hunyuan-VAE](https://huggingface.co/hunyuanvideo-community/HunyuanVideo/tree/main/vae), [CogVideoX-VAE](https://huggingface.co/zai-org/CogVideoX1.5-5B/tree/main/vae), or any other video VAE you want to distill.
+
+* (Optional) You can pre-generate and save latents for small video datasets to reduce the computational cost of encoding during training.
+```
+python generate_latents.py
+```
+And you can use the dataset implementation in `video_latent_dataset.py`.
+
+*  You need to modify some necessary paths as required in `train.sh`.
+
+* Run the following command to start training.
+```
+bash train.sh
+```
+
+* Try using the trained model to reconstruct videos!
+Run the following command:
+```
+python validation_videos.py
+```
+
+* Calculate metrics.
+You can download the [pretrained weights](https://www.dropbox.com/s/ge9e5ujwgetktms/i3d_torchscript.pt
+) required for calculating rFVD, modify the corresponding paths for loading the model weights and validation dataset directory in the code, and run the following code to compute the rFVD, PSNR, LPIPS, and SSIM metrics.
+```
+torchrun --nnodes=1 --nproc_per_node=1 train_vae/validation_metrics.py
+```
+
+## ❤️ Acknowledgements
+
+Our TurboVAED codes are mainly built with [Open-Sora-Plan](https://github.com/PKU-YuanGroup/Open-Sora-Plan) and [diffusers](https://github.com/huggingface/diffusers). Thanks for all these great works.
 
 ## 📝 Citation
 
