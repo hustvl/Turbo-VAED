@@ -817,8 +817,7 @@ class TurboVAEDDecoder3d(nn.Module):
         # out
         if self.patch_size == 1:
             self.norm_out = RMSNorm(output_channel, eps=1e-8, elementwise_affine=False)
-        else:
-            self.norm_out = nn.BatchNorm3d(output_channel, affine=False)
+        
         self.conv_act = nn.SiLU()
 
         self.conv_out = TurboVAEDCausalConv3d(
@@ -879,7 +878,8 @@ class TurboVAEDDecoder3d(nn.Module):
         if self.patch_size == 1:
             hidden_states = self.norm_out(hidden_states.permute(0, 2, 3, 4, 1)).permute(0, 4, 1, 2, 3)
         else:
-            hidden_states = self.norm_out(hidden_states)
+            variance = hidden_states.pow(2).mean(1, keepdim=True)
+            hidden_states = hidden_states * torch.rsqrt(variance + 1e-8)
 
         hidden_states = self.conv_act(hidden_states)
         hidden_states = self.conv_out(hidden_states)
