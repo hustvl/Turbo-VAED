@@ -11,6 +11,9 @@ from diffusers_vae.src.diffusers.models.autoencoders import AutoencoderKLLTXVide
 from diffusers_vae.src.diffusers.models.autoencoders import AutoencoderKLHunyuanVideo
 from diffusers_vae.src.diffusers.models.autoencoders import AutoencoderKLCogVideoX
 
+teacher_model_mapping = {"CogVideoX":AutoencoderKLCogVideoX, "Hunyuan":AutoencoderKLHunyuanVideo,
+                         "LTX":AutoencoderKLLTXVideo}
+
 def load_json_to_dict(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -24,12 +27,13 @@ model_config = ""
 resume_from_checkpoint = ""
 video_root_path = ""
 save_path = ""
+teacher_model_name = ""
 
-teacher_model = AutoencoderKLHunyuanVideo.from_pretrained(
+teacher_model = teacher_model_mapping[teacher_model_name].from_pretrained(
     ""
 ).to("cuda")
 
-model = AutoencoderKLLTXVideo.from_config(
+model = AutoencoderKLTurboVAED.from_config(
     config=load_json_to_dict(model_config)
 )
 checkpoint = torch.load(resume_from_checkpoint, map_location="cpu")
@@ -37,7 +41,7 @@ model.decoder.load_state_dict(checkpoint)
 model = model.to("cuda")
 
 transform = transforms.Compose([
-    transforms.Resize(size=(720,1280))
+    transforms.Resize(size=(512,512))
 ])
 
 def transform_video(video_name):

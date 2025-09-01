@@ -24,6 +24,9 @@ from diffusers_vae.src.diffusers.models.autoencoders import AutoencoderKLLTXVide
 from diffusers_vae.src.diffusers.models.autoencoders import AutoencoderKLHunyuanVideo
 from diffusers_vae.src.diffusers.models.autoencoders import AutoencoderKLCogVideoX
 
+teacher_model_mapping = {"CogVideoX":AutoencoderKLCogVideoX, "Hunyuan":AutoencoderKLHunyuanVideo,
+                         "LTX":AutoencoderKLLTXVideo}
+
 def normalize_tensor_to_0_1(tensor):
     min_val = tensor.min()
     max_val = tensor.max()
@@ -162,8 +165,10 @@ def load_json_to_dict(file_path):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
         return None
+    
+teacher_model_name = ""
 
-teacher_model = AutoencoderKLHunyuanVideo.from_pretrained(
+teacher_model = teacher_model_mapping[teacher_model_name].from_pretrained(
     ""
 ).to("cuda")
 
