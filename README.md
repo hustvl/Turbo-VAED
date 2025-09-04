@@ -11,6 +11,7 @@ Huazhong University of Science and Technology (HUST)
 (\* equal contribution, 📧 corresponding author: xgwang@hust.edu.cn)
 
 [![arxiv paper](https://img.shields.io/badge/arXiv-Paper-red)](https://arxiv.org/abs/2508.09136)
+[![checkpoints](https://img.shields.io/badge/HuggingFace-🤗-green)](https://huggingface.co/hustvl/Turbo-VAED)
 
 </div>
 
@@ -19,8 +20,9 @@ Huazhong University of Science and Technology (HUST)
 </div>
 
 ## 📰 News
+- **[2025.09.04]** We have released the pre-trained weights!
 
-- **[2025.08.25]** We have released the code, and the weights will be available soon!
+- **[2025.08.25]** We have released the code, and the weights will be available soon.
 
 - **[2025.08.13]** We have released our paper on [arXiv](https://arxiv.org/abs/2508.09136).
 
