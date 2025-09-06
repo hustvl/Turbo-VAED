@@ -37,7 +37,7 @@ model = AutoencoderKLTurboVAED.from_config(
     config=load_json_to_dict(model_config)
 )
 checkpoint = torch.load(resume_from_checkpoint, map_location="cpu")
-model.decoder.load_state_dict(checkpoint)
+model.decoder.load_state_dict(checkpoint, strict=False)
 model = model.to("cuda")
 
 transform = transforms.Compose([
