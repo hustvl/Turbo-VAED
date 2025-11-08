@@ -20,6 +20,8 @@ Huazhong University of Science and Technology (HUST)
 </div>
 
 ## 📰 News
+- **[2025.11.08]** Turbo-VAED is accepted by AAAI 2026! 🎉🎉🎉
+
 - **[2025.09.04]** We have released the pre-trained weights!
 
 - **[2025.08.25]** We have released the code, and the weights will be available soon.
