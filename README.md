@@ -20,6 +20,9 @@ Huazhong University of Science and Technology (HUST)
 </div>
 
 ## 📰 News
+
+- **[2025.11.29]** Check our [MobileI2V](https://github.com/hustvl/MobileI2V), a **270M tiny videogen model** on the mobile! **Turbo-VAED helps 3 times decoding speedup**.
+
 - **[2025.11.08]** Turbo-VAED is accepted by AAAI 2026! 🎉🎉🎉
 
 - **[2025.09.04]** We have released the pre-trained weights!
