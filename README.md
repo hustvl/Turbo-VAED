@@ -21,6 +21,8 @@ Huazhong University of Science and Technology (HUST)
 
 ## 📰 News
 
+- **[2026.07.09]** We have released **Turbo-VAED-Wan2.2-TI2V-5B**, a distilled VAE decoder for Wan2.2-TI2V-5B. The checkpoint is available on [Hugging Face](https://huggingface.co/zy12123/Turbo-VAED-Wan2.2-TI2V-5B).
+
 - **[2025.11.29]** Check our [MobileI2V](https://github.com/hustvl/MobileI2V), a **270M tiny videogen model** on the mobile! **Turbo-VAED helps 3 times decoding speedup**.
 
 - **[2025.11.08]** Turbo-VAED is accepted by AAAI 2026! 🎉🎉🎉
@@ -62,6 +64,11 @@ conda create -n turbovaed python=3.10.0
 conda activate turbovaed
 pip install -r requirements.txt
 ```
+## 🚀 Get Turbo-VAED-Wan
+
+We release **Turbo-VAED-Wan2.2-TI2V-5B**, a distilled VAE decoder for Wan2.2-TI2V-5B.
+
+The checkpoint is available on [Hugging Face](https://huggingface.co/zy12123/Turbo-VAED-Wan2.2-TI2V-5B).
 
 ## 🎮 Train Your Own Models
 
