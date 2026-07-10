@@ -81,7 +81,17 @@ The checkpoint is available on [Hugging Face](https://huggingface.co/zy12123/Tur
 
 Turbo-VAED-Wan achieves a **1.95× decoding speedup** and **71.8% FLOPs reduction** on one NVIDIA L4 GPU using BF16, while maintaining comparable reconstruction quality.
 
-[View the reconstruction comparison](images/wan_comparison/comparison.mp4)
+<p align="center">
+  <a href="images/wan_comparison/comparison.mp4">
+    <img src="images/wan_comparison/comparison.gif"
+         width="640"
+         alt="Wan2.2-TI2V-5B VAE and Turbo-VAED-Wan reconstruction comparison">
+  </a>
+</p>
+
+<p align="center">
+  Wan2.2-TI2V-5B VAE vs. Turbo-VAED-Wan
+</p>
 
 ### Quick Start
 
