@@ -55,6 +55,7 @@ To our knowledge, our method enables real-time 720p video VAE decoding on mobile
 <img src="images/table2.png" alt="Results2">
 </div>
 
+
 ## 🎯 How to Use
 
 ### Installation
@@ -64,11 +65,38 @@ conda create -n turbovaed python=3.10.0
 conda activate turbovaed
 pip install -r requirements.txt
 ```
+
 ## 🚀 Get Turbo-VAED-Wan
 
-We release **Turbo-VAED-Wan2.2-TI2V-5B**, a distilled VAE decoder for Wan2.2-TI2V-5B.
+We release **Turbo-VAED-Wan2.2-TI2V-5B**, a lightweight distilled VAE decoder for [Wan2.2-TI2V-5B](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers).
 
 The checkpoint is available on [Hugging Face](https://huggingface.co/zy12123/Turbo-VAED-Wan2.2-TI2V-5B).
+
+### Performance
+
+| Decoder | FPS ↑ | FLOPs / video (T) ↓ | PSNR ↑ | SSIM ↑ |
+|:--|--:|--:|--:|--:|
+| [Wan2.2-TI2V-5B VAE](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers) | 27.61 | 20.780 | **36.24** | **0.9624** |
+| **Turbo-VAED-Wan** | **53.72** | **5.868** | 35.52 | 0.9620 |
+
+Turbo-VAED-Wan achieves a **1.95× decoding speedup** and **71.8% FLOPs reduction** on one NVIDIA L4 GPU using BF16, while maintaining comparable reconstruction quality.
+
+[View the reconstruction comparison](images/wan_comparison/comparison.mp4)
+
+### Quick Start
+
+```bash
+python demo_wan.py \
+  --input_video path/to/input.mp4 \
+  --teacher_model Wan-AI/Wan2.2-TI2V-5B-Diffusers \
+  --checkpoint path/to/Turbo-VAED-Wan2.2-TI2V-5B.ckpt \
+  --num_frames 17 \
+  --output_dir outputs/wan_demo
+```
+
+Turbo-VAED-Wan is a plug-and-play replacement for the original Wan2.2 VAE decoder, using the same latent inputs without changing the rest of the pipeline.
+
+You can also try the third-party Turbo-VAED decoder from [daVinci-MagiHuman](https://github.com/GAIR-NLP/daVinci-MagiHuman). Thanks for sharing it.
 
 ## 🎮 Train Your Own Models
 
